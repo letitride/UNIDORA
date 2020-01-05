@@ -246,7 +246,10 @@ GameObject:
   - component: {fileID: 4365496644633464}
   - component: {fileID: 33413961407475098}
   - component: {fileID: 23654886500983078}
-  m_Layer: 0
+  - component: {fileID: 54656016929257488}
+  - component: {fileID: 136767845598511102}
+  - component: {fileID: 114534310232662088}
+  m_Layer: 12
   m_Name: Sword01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,6 +408,7 @@ GameObject:
   - component: {fileID: 114687642086272420}
   - component: {fileID: 114157372768310112}
   - component: {fileID: 114809976824446880}
+  - component: {fileID: 114779751667224084}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -480,7 +484,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4511543354509254}
-  m_Layer: 0
+  - component: {fileID: 54243407928153304}
+  - component: {fileID: 65062559738903370}
+  - component: {fileID: 114091347715424004}
+  m_Layer: 10
   m_Name: Hips
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,6 +1299,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376525551981262}
   m_Mesh: {fileID: 4300002, guid: fd3217c5ddfe14d12915952e5f0a2a3f, type: 3}
+--- !u!54 &54243407928153304
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768759712391978}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54656016929257488
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1376525551981262}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65062559738903370
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768759712391978}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95142582520764352
 Animator:
   serializedVersion: 3
@@ -1309,6 +1358,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114091347715424004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1768759712391978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a781046252e2d41d4a9166c9d7594fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114157372768310112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1342,6 +1402,18 @@ MonoBehaviour:
   destination: {x: 0, y: 0, z: 0}
   walkSpeed: 0.6
   rotationSpeed: 360
+--- !u!114 &114534310232662088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1376525551981262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487eb937dfe2b4da8af55a85b187b6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mCollider: {fileID: 0}
 --- !u!114 &114687642086272420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1351,6 +1423,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db09d499beaed462ca632fa128dcf5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 1.5
+--- !u!114 &114779751667224084
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654624484980680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b02dd929489a47a0bfa2521a9c1c9fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114809976824446880
@@ -1364,6 +1448,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3350726c9ebf4bfa8cc882738bd805c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &136767845598511102
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1376525551981262}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 1
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0.58}
 --- !u!137 &137548672256993480
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -140,7 +140,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4166608863533896}
-  m_Layer: 0
+  - component: {fileID: 54057345252178524}
+  - component: {fileID: 135030412400857804}
+  - component: {fileID: 114205165693267094}
+  m_Layer: 11
   m_Name: HEAD1_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -412,7 +415,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4809517548761500}
-  m_Layer: 0
+  - component: {fileID: 54864679993088402}
+  - component: {fileID: 65421609662931354}
+  - component: {fileID: 114610103710207382}
+  m_Layer: 9
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,6 +543,7 @@ GameObject:
   - component: {fileID: 114696744495308634}
   - component: {fileID: 114026529134456444}
   - component: {fileID: 114146464067724400}
+  - component: {fileID: 114241220387924584}
   m_Layer: 0
   m_Name: Warg
   m_TagString: Untagged
@@ -722,7 +729,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1889396970471586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.47505, y: 0, z: -41.203247}
+  m_LocalPosition: {x: 46.68744, y: 0, z: -42.390263}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4686839655585598}
@@ -1178,6 +1185,48 @@ Transform:
   m_Father: {fileID: 4383501084675058}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &54057345252178524
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325734123732412}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!54 &54864679993088402
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639475177889196}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65421609662931354
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639475177889196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 2.5, z: 1.6}
+  m_Center: {x: 0, y: 0, z: 0.4}
 --- !u!95 &95916831784272388
 Animator:
   serializedVersion: 3
@@ -1221,6 +1270,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3350726c9ebf4bfa8cc882738bd805c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114205165693267094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325734123732412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487eb937dfe2b4da8af55a85b187b6d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mCollider: {fileID: 0}
+--- !u!114 &114241220387924584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1889396970471586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b02dd929489a47a0bfa2521a9c1c9fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114610103710207382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1639475177889196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a781046252e2d41d4a9166c9d7594fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114696744495308634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1239,6 +1322,18 @@ MonoBehaviour:
   characterName: Warg
   attacking: 0
   died: 0
+--- !u!135 &135030412400857804
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325734123732412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!137 &137538026497116986
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
